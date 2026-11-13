@@ -6,14 +6,65 @@
   <title>Events | Riverbend Yoga Studio</title>
 </head>
 <body>
-<!-- TODO header -->
-<!-- TODO nav: <nav><ul><li><a href="..."> for all four pages, relative paths -->
-<!-- TODO footer: <footer> with something a real visitor would need -->
-<!-- TODO main: one <h1>, then the monthly workshop list -->
-<!-- TODO form: <form> > <fieldset> > <legend>, a <label for> per field, -->
-<!-- TODO       name, email (type=email), class/event interest, experience level -->
-<!-- TODO       (radio group inside its own fieldset), preferred contact method, -->
-<!-- TODO       message, and required on the fields that must not be empty -->
-<!-- TODO       then a submit button -->
+<header>
+  <img src="assets/yoga-logo_c.png" alt="Riverbend Yoga Studio logo">
+</header>
+<nav aria-label="Primary">
+  <ul>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="services.html">Classes</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="events.html">Events</a></li>
+  </ul>
+</nav>
+  <main>
+    <h1>Monthly workshops at Riverbend</h1>
+    <p>Workshops run the first Saturday of each month, 10 am to noon, in the studio. They are open to non-students, limited to twelve people, and cost $35 (community rate available). Spots go by request, so use the form below and we will email you to confirm.</p>
+    <ul>
+      <li>December - Foundations: Safe Alignment Basics</li>
+      <li>January - Chair Yoga for Everyday Strength</li>
+      <li>February - Breath and Stress Reset</li>
+    </ul>
+
+    <form>
+      <fieldset>
+        <legend>Request a spot</legend>
+
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="interest">Class or event you're interested in</label>
+        <input type="text" id="interest" name="class_interest" required>
+
+        <fieldset>
+          <legend>Your experience level</legend>
+          <label for="new"><input type="radio" id="new" name="level" value="new" required>
+            New to yoga</label>
+          <label for="some"><input type="radio" id="some" name="level" value="some">
+            Some experience</label>
+          <label for="lots"><input type="radio" id="lots" name="level" value="lots">
+            Regular practice</label>
+        </fieldset>
+
+        <label for="contact">Preferred contact method</label>
+        <select id="contact" name="contact_method" required>
+          <option value="">Choose one</option>
+          <option value="email">Email</option>
+          <option value="text">Text message</option>
+        </select>
+
+        <label for="msg">Anything we should know? Accessibility needs, questions, injuries to work around.</label>
+        <textarea id="msg" name="message" minlength="10" maxlength="500"></textarea>
+
+        <button type="submit">Send request</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>412 Cedar Street, Riverbend District · Open Mon-Fri 7 am-9 pm, Sun 8 am-1 pm · questions? use the form on our Events page.</p>
+  </footer>
 </body>
 </html>
