@@ -66,7 +66,7 @@ figure {
   border: 2px solid var(--sage);
   border-radius: 8px;
   padding: 12px;
-  background: #ffffff;
+  background: var(--cream);
 }
 figcaption {
   font-style: italic;
@@ -77,7 +77,7 @@ figcaption {
 video { display: block; margin: 24px auto; max-width: 100%; }
 
 form {
-  background: #ffffff;
+  background: var(--cream);
   border: 2px solid var(--sage);
   border-radius: 8px;
   padding: 16px;
