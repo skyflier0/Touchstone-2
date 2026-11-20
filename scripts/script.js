@@ -84,6 +84,24 @@ function validateForm(event) {
     interestErr.textContent = "";
   }
 
+    const levelErr = document.getElementById("level-error");
+  const levelChosen = document.querySelector('input[name="level"]:checked');
+  if (!levelChosen) {
+    levelErr.textContent = "Choose an experience level.";
+    ok = false;
+  } else {
+    levelErr.textContent = "";
+  }
+
+  const contact = document.getElementById("contact");
+  const contactErr = document.getElementById("contact-error");
+  if (contact.value === "") {
+    contactErr.textContent = "Pick how we should reach you.";
+    ok = false;
+  } else {
+    contactErr.textContent = "";
+  }
+
 
   const statusLine = document.getElementById("form-status");
   if (ok) {
