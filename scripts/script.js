@@ -11,6 +11,7 @@ function buildOptions() {
   const select = document.getElementById("fav-select");
   for (const c of classes) {
     const opt = document.createElement("option");
+    if (!select) { return; }
     opt.value = c.id;
     opt.textContent = c.name + " (" + c.when + ")";
     select.appendChild(opt);

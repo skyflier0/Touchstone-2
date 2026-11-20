@@ -27,15 +27,17 @@
       <li>February - Breath and Stress Reset</li>
     </ul>
 
-    <form>
+    <form novalidate>
       <fieldset>
         <legend>Request a spot</legend>
 
         <label for="name">Full name</label>
         <input type="text" id="name" name="name" required>
+        <p class="error" id="name-error" role="status"></p>
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
+        <p class="error" id="email-error" role="status"></p>
 
         <label for="interest">Class or event you're interested in</label>
         <input type="text" id="interest" name="class_interest" required>
@@ -59,6 +61,7 @@
 
         <label for="msg">Anything we should know? Accessibility needs, questions, injuries to work around.</label>
         <textarea id="msg" name="message" minlength="10" maxlength="500"></textarea>
+        <p id="form-status" role="status"></p>
 
         <button type="submit">Send request</button>
       </fieldset>
