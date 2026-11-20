@@ -39,16 +39,19 @@ function saveFavorite() {
 document.addEventListener("DOMContentLoaded", function () {
   buildOptions();
   showFavorite();
+
   const select = document.getElementById("fav-select");
   if (select) {
     select.addEventListener("change", showFavorite);
     document.getElementById("save-fav").addEventListener("click", saveFavorite);
-    const form = document.querySelector("form");
+  }
+
+  const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", validateForm);
   }
-  }
 });
+
 
 function validateForm(event) {
   event.preventDefault();
@@ -72,9 +75,15 @@ function validateForm(event) {
     emailErr.textContent = "";
   }
 
-    } else {
-    emailErr.textContent = "";
+    const interest = document.getElementById("interest");
+  const interestErr = document.getElementById("interest-error");
+  if (interest.value.trim() === "") {
+    interestErr.textContent = "Let us know what you're interested in.";
+    ok = false;
+  } else {
+    interestErr.textContent = "";
   }
+
 
   const statusLine = document.getElementById("form-status");
   if (ok) {
