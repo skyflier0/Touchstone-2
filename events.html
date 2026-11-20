@@ -41,6 +41,7 @@
 
         <label for="interest">Class or event you're interested in</label>
         <input type="text" id="interest" name="class_interest" required>
+        <p class="error" id="interest-error" role="status"></p>
 
         <fieldset>
           <legend>Your experience level</legend>
@@ -61,6 +62,7 @@
 
         <label for="msg">Anything we should know? Accessibility needs, questions, injuries to work around.</label>
         <textarea id="msg" name="message" minlength="10" maxlength="500"></textarea>
+        <p class="error" id="msg-error" role="status"></p>
         <p id="form-status" role="status"></p>
 
         <button type="submit">Send request</button>

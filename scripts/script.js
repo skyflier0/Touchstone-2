@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (select) {
     select.addEventListener("change", showFavorite);
     document.getElementById("save-fav").addEventListener("click", saveFavorite);
+    const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", validateForm);
+  }
   }
 });
 
@@ -68,10 +72,14 @@ function validateForm(event) {
     emailErr.textContent = "";
   }
 
-  const status = document.getElementById("form-status");
+    } else {
+    emailErr.textContent = "";
+  }
+
+  const statusLine = document.getElementById("form-status");
   if (ok) {
-    status.textContent = "Thanks, " + name.value + " — we will email you to confirm your spot.";
+    statusLine.textContent = "Thanks, " + name.value + " — we will email you to confirm your spot.";
   } else {
-    status.textContent = "";
+    statusLine.textContent = "";
   }
 }
