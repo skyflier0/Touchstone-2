@@ -45,3 +45,33 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("save-fav").addEventListener("click", saveFavorite);
   }
 });
+
+function validateForm(event) {
+  event.preventDefault();
+  let ok = true;
+
+  const name = document.getElementById("name");
+  const nameErr = document.getElementById("name-error");
+  if (name.value.trim() === "") {
+    nameErr.textContent = "Please tell us your name.";
+    ok = false;
+  } else {
+    nameErr.textContent = "";
+  }
+
+  const email = document.getElementById("email");
+  const emailErr = document.getElementById("email-error");
+  if (email.value.indexOf("@") === -1) {
+    emailErr.textContent = "That email is missing an @ sign.";
+    ok = false;
+  } else {
+    emailErr.textContent = "";
+  }
+
+  const status = document.getElementById("form-status");
+  if (ok) {
+    status.textContent = "Thanks, " + name.value + " — we will email you to confirm your spot.";
+  } else {
+    status.textContent = "";
+  }
+}
