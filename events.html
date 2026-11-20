@@ -52,6 +52,7 @@
           <label for="lots"><input type="radio" id="lots" name="level" value="lots">
             Regular practice</label>
         </fieldset>
+        <p class="error" id="level-error" role="status"></p>
 
         <label for="contact">Preferred contact method</label>
         <select id="contact" name="contact_method" required>
@@ -59,6 +60,7 @@
           <option value="email">Email</option>
           <option value="text">Text message</option>
         </select>
+        <p class="error" id="contact-error" role="status"></p>
 
         <label for="msg">Anything we should know? Accessibility needs, questions, injuries to work around.</label>
         <textarea id="msg" name="message" minlength="10" maxlength="500"></textarea>
